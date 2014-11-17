@@ -5,21 +5,21 @@ title: Git 常用命令行
 <h2>{{ page.title }}</h2>
 
 
-## [Git 日志]
+<p> [Git 日志]
 $ git log --pretty=oneline
 $ git log
 输入 q 退出日志
+</p>
 
-
-## [版本回退上个版本]
+<p> [版本回退上个版本]
 $ git reset --hard HEAD^
+</p>
 
-
-## [命令记录]
+<p> [命令记录]
 $ git reflog
+</p>
 
-
-## [Git 分支]
+<p> [Git 分支]
 $ git push origin master 推送分支
 $ git checkout -b BranchName 创建+切换分支
 $ git merge BranchName 合并某分支到当前分支
@@ -32,13 +32,15 @@ $ git branch -d -r Branchname 删除远程branch（例git branch -d -r origin/aa
 $ git push <remote repository> <local branch> 把本地branch 推送到远程服务器
 $ git checkout name 切换分支
 $ git remote -v 要查看远程库的信息
+</p>
 
+<p>
 [移动或重命名文件]
 $ git mv old-filename new-filename
-
-
+</p>
+<p>
 [从工作目录和 Git 代码索引中删除文件]
 $ git rm filename
-
+</p>
 
 <p>{{ page.date | date_to_string }}</p>

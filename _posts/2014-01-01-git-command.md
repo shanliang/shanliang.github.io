@@ -21,7 +21,7 @@ $ git reset --hard HEAD^
 $ git reflog
 
 
-### Git 分支 ###
+### 分支命令 ###
 - $ git push origin master 推送分支
 - $ git checkout -b BranchName 创建+切换分支
 - $ git merge BranchName 合并某分支到当前分支

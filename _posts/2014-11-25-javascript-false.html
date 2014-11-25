@@ -1,0 +1,53 @@
+---
+layout: default
+title: Javascript 中对 null  undefined 的理解 
+---
+
+<h2>Javascript 中对 null 和 undefined 的理解 </h2>
+<p>请打开Chrome Console 查看结果</p>
+
+<h2>if()中会返回false 的那些值</h2>
+<p>0,"",null,undefined,false,NaN</p>
+<script>
+	// null undefined
+	var obj = "a";
+	var nullobj;
+
+	if (nullobj == null){
+		console.log("obj is null");
+	}
+
+	if (nullobj == undefined){
+		console.log("obj is undefined");
+	}
+
+	if ( !nullobj ){
+		console.log("! obj ");
+	}
+
+	if(null == undefined){
+		console.log('null == undefined');
+	}
+
+	// if()中会返回false 的那些值
+	if(!0){
+		console.log('number 0')
+	}
+	if(!""){
+		console.log("empty string")
+	}
+	if(!null){
+		console.log("null")
+	}
+	if(!undefined){
+		console.log("undefined")
+	}
+	if(!false){
+		console.log("false")
+	}
+	if(!NaN){
+		console.log("NaN")
+	}
+
+
+</script>

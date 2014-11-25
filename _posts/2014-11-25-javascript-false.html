@@ -1,13 +1,18 @@
----
+，---
 layout: default
 title: Javascript 中对 null  undefined 的理解 
 ---
 
 <h2>Javascript 中对 null 和 undefined 的理解 </h2>
-<p>请打开Chrome Console 查看结果</p>
+<p>ECMAScript 中有5中简单数据类型（也称基本数据类型）：Undefined、Null、Boolean、Number、String。还有一种复杂数据类型：Object</p>
+<p>Undefined类型只有一个值，即undefined。只声明没有初始化的变量值就是undefined。</p>
+<p>Null类型是第二个只有一个值的数据类型，即null。null值表示一个空对象指针，这也是用typeof null 返回 object的原因。</p>
 
-<h2>if()中会返回false 的那些值</h2>
-<p>0,"",null,undefined,false,NaN</p>
+<h2>Javascript 中会被当做假(false)的那些值:</h2>
+<p>false, null, undefined, 数字0, 数字NaN, 空字符串""</p>
+
+<p>请打开Chrome Console 查看测试代码结果</p>
+
 <script>
 	// null undefined
 	var obj = "a";

@@ -3,59 +3,70 @@ layout: default
 title: 对Javascript中 null 和 undefined 的理解 
 ---
 
+<link rel="stylesheet" title="Default" href="http://shanliang.github.io/css/highlight/default.css">
+<script src="http://shanliang.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <h2>对Javascript中 null 和 undefined 的理解 </h2>
 <p>ECMAScript 中有5种简单数据类型（也称基本数据类型）：Undefined、Null、Boolean、Number、String。还有一种复杂数据类型：Object。</p>
 <p>Undefined类型只有一个值，即undefined。只声明没有初始化的变量值就是undefined值。</p>
 <span>ECMA-262:</span><i>The Undefined type has exactly one value, called undefined. Any variable that has not been assigned a value has the value undefined.</i>
 <p>Null类型是第二个只有一个值的数据类型，即null。null值表示一个空对象指针，这也是用typeof null 返回 object的原因。</p>
 <span>ECMA-262:</span><i>The Null type has exactly one value, called null.</i>
+<pre>
+	<code class="javascript">
+		var obj = "a";
+		var nullobj;
+
+		if (nullobj == null){
+			console.log("obj is null");
+		}
+
+		if (nullobj == undefined){
+			console.log("obj is undefined");
+		}
+
+		if ( !nullobj ){
+			console.log("! obj ");
+		}
+
+		if(null == undefined){
+			console.log('null == undefined');
+		}
+	</code>
+</pre>
 <h2>Javascript 中会被当做假(false)的那些值</h2>
 <p>false, null, undefined, 数字0, 数字NaN, 空字符串""</p>
+<pre>
+	<code class="javascript">
+		if(!0){
+			console.log('number 0')
+		}
+		if(!""){
+			console.log("empty string")
+		}
+		if(!null){
+			console.log("null")
+		}
+		if(!undefined){
+			console.log("undefined")
+		}
+		if(!false){
+			console.log("false")
+		}
+		if(!NaN){
+			console.log("NaN")
+		}
+	</code>
+</pre>
 
-<p><i>请打开Chrome Console 查看测试代码结果</i></p>
-
+<p><i>你可以打开Chrome Console 查看代码运行结果。</i></p>
 <script>
-	// null undefined
-	var obj = "a";
-	var nullobj;
-
-	if (nullobj == null){
-		console.log("obj is null");
+	var codes = document.getElementsByTagName('code');
+	for(var i = 0, len = codes.length; i<len; i++){
+		var codeText = codes[i].innerText;
+		var codeRun = new Function(codeText);
+		codeRun();
 	}
-
-	if (nullobj == undefined){
-		console.log("obj is undefined");
-	}
-
-	if ( !nullobj ){
-		console.log("! obj ");
-	}
-
-	if(null == undefined){
-		console.log('null == undefined');
-	}
-
-	// if()中会返回false 的那些值
-	if(!0){
-		console.log('number 0')
-	}
-	if(!""){
-		console.log("empty string")
-	}
-	if(!null){
-		console.log("null")
-	}
-	if(!undefined){
-		console.log("undefined")
-	}
-	if(!false){
-		console.log("false")
-	}
-	if(!NaN){
-		console.log("NaN")
-	}
-
-
 </script>
 
 {{ page.date | date: "%Y-%m-%d" }}

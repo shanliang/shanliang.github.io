@@ -12,23 +12,45 @@ title: web app 初探
 <div class="em">em是相对长度单位。相对于其父元素来设置字体大小的</div>
 
 <h2>input TYPE</h2>
-<input type="text">
-<input type="color">
-<input type="number">
-<input type="date">
-<input type="range">
-<input type="email">
-<input type="search">
-<h2>媒体类型（Media types）</h2>
 <ul>
-	<li>■ all：匹配所有设备；</li>
-	<li>■ handled：匹配手持设备（小屏幕、单色、带宽有限）；</li>
-	<li>■ print：匹配分页媒体或打印预览模式下的屏幕；</li>
-	<li>■ screen：匹配彩色计算机屏幕；</li>
+	<li><label>text:</label><input type="text"></li>
+	<li><label>color:</label><input type="color"></li>
+	<li><label>number:</label><input type="number"></li>
+	<li><label>date:</label><input type="date"></li>
+	<li><label>range:</label><input type="range"></li>
+	<li><label>email:</label><input type="email"></li>
+	<li><label>search:</label><input type="search"></li>
+</ul>
+<h2>CSS3 media queries 媒体类型（Media types）</h2>
+<ul>
+	<li>all：匹配所有设备；</li>
+	<li>handled：匹配手持设备（小屏幕、单色、带宽有限）；</li>
+	<li>print：匹配分页媒体或打印预览模式下的屏幕；</li>
+	<li>screen：匹配彩色计算机屏幕；</li>
 </ul>
 <h2>CSS3的媒体查询功能，能检测出移动设备的以下特性：</h2>
 <ul>
-	<li>■ min-device-width 和max-device-width：匹配设备屏幕的尺寸；</li>
-	<li>■ min-width 和max-width：匹配视口的宽度，例如浏览器窗口宽度；</li>
-	<li>■ orientation（值为portrait 和landscape）：匹配设备是横屏还是竖屏。</li>
+	<li>min-device-width 和max-device-width：匹配设备屏幕的尺寸；</li>
+	<li>min-width 和max-width：匹配视口的宽度，例如浏览器窗口宽度；</li>
+	<li>orientation（值为portrait 和landscape）：匹配设备是横屏还是竖屏;</li>
 </ul>
+<h2>用户设备嗅探（User-agent sniff）</h2>
+<p><a href="http://detectmobilebrowsers.com/">detectmobilebrowsers</a></p>
+<h2>viewport</h2>
+<p>如果不设置viewpoint，网站在viewpoint就会显示成缩略形式。</p>
+<h2>weinre远程实时调试</h2>
+<p>WEb INspector REmote的简写，现在是Apache的一个开源项目。<a href="http://www.xbole.com/">小苹果</a></p>
+<h2>AVD模拟器调试</h2>
+<h2>弹性图片，让图片随视口缩放</h2>
+<p>网站的大图通常宽度都超过480像素，如果用前面的代码限制了缩放，这些图片在iPhone版显示显然会超过屏幕。好在iPhone机能还够，我们可以用CSS让iPhone自动将大图片缩小显示。img{max-width:100%;height:auto;}</p>
+<h2>image-set</h2>
+<p>这个属性用来支持Web前端人员解决不同分辨率下图片的显示，特别的（Retina屏幕）.用例见qq.com,taobao.com LOGO</p>
+<code>
+    background: url(http://gtms04.alicdn.com/tps/i4/TB1pEAeGFXXXXaQXFXXyTkXLpXX-500-444.png);/* 普通屏幕 */
+    background-image: -webkit-image-set(url(http://gtms04.alicdn.com/tps/i4/TB1pEAeGFXXXXaQXFXXyTkXLpXX-500-444.png) 1x,url(http://gtms01.alicdn.com/tps/i1/TB1sFgdGFXXXXXPXVXXsH1j1pXX-1000-888.png) 2x);/* Retina */
+    background-image: -moz-image-set(url(http://gtms04.alicdn.com/tps/i4/TB1pEAeGFXXXXaQXFXXyTkXLpXX-500-444.png) 1x,url(http://gtms01.alicdn.com/tps/i1/TB1sFgdGFXXXXXPXVXXsH1j1pXX-1000-888.png) 2x);
+    background-image: -ms-image-set(url(http://gtms04.alicdn.com/tps/i4/TB1pEAeGFXXXXaQXFXXyTkXLpXX-500-444.png) 1x,url(http://gtms01.alicdn.com/tps/i1/TB1sFgdGFXXXXXPXVXXsH1j1pXX-1000-888.png) 2x);
+    background-image: -o-image-set(url(http://gtms04.alicdn.com/tps/i4/TB1pEAeGFXXXXaQXFXXyTkXLpXX-500-444.png) 1x,url(http://gtms01.alicdn.com/tps/i1/TB1sFgdGFXXXXXPXVXXsH1j1pXX-1000-888.png) 2x);
+</code>
+<h2>阻止旋转屏幕时自动调整字体大小</h2>
+<code>html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {-webkit-text-size-adjust:none;}</code>

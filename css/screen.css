@@ -2,7 +2,7 @@ html{font-size: 10px;}
 body{ color: #333; font-size: 1.4rem; margin: 0 auto; width: 80%; line-height: 30px; background: url(/images/GradientBg.gif) repeat-x left top #9dd7e9;}
 div.content{ background: white; padding: 70px 60px; margin-bottom: 60px;}
 pre{ line-height: 16px;}
-a{ text-decoration: none;}
+a{ text-decoration: none; color: #0099CC;}
 @media screen and (max-device-width: 480px;) {
 	body{ width: 100%}
 	div.content{ padding: 10px;}

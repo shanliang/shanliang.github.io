@@ -1,0 +1,34 @@
+---
+layout: default
+title: web app 初探
+---
+
+<div><a href="http://www.w3.org/TR/html5/">w3.org/h5</a></div>
+<h2>单位</h2>
+<p>任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。为了简化font-size的换算，需要在css中的body选择器中声明Font-size=62.5%，这就使em值变为 16px*62.5%=10px, 这样12px=1.2em, 10px=1em, 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。px,em,rem单位转换工具：<a href="http://pxtoem.com/">pxtoem</a></p>
+
+<div class="rem">rem是CSS3新增的一个相对单位（root em，根em）</div>
+<div class="px">px像素（Pixel）。相对长度单位。像素px是相对于显示器屏幕分辨率而言的。</div>
+<div class="em">em是相对长度单位。相对于其父元素来设置字体大小的</div>
+
+<h2>input TYPE</h2>
+<input type="text">
+<input type="color">
+<input type="number">
+<input type="date">
+<input type="range">
+<input type="email">
+<input type="search">
+<h2>媒体类型（Media types）</h2>
+<ul>
+	<li>■ all：匹配所有设备；</li>
+	<li>■ handled：匹配手持设备（小屏幕、单色、带宽有限）；</li>
+	<li>■ print：匹配分页媒体或打印预览模式下的屏幕；</li>
+	<li>■ screen：匹配彩色计算机屏幕；</li>
+</ul>
+<h2>CSS3的媒体查询功能，能检测出移动设备的以下特性：</h2>
+<ul>
+	<li>■ min-device-width 和max-device-width：匹配设备屏幕的尺寸；</li>
+	<li>■ min-width 和max-width：匹配视口的宽度，例如浏览器窗口宽度；</li>
+	<li>■ orientation（值为portrait 和landscape）：匹配设备是横屏还是竖屏。</li>
+</ul>
